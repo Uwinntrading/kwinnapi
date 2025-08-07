@@ -1,4 +1,6 @@
 .env
 .git
+.gitignore
 dump
+build/index.js
 *.xlsx
