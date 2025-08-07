@@ -1,0 +1,423 @@
+<%
+const invoiceDatae = orderData.createdAt.toLocaleDateString('en-GB', {
+  day: '2-digit',
+  month: '2-digit',
+  year: 'numeric'
+});
+
+const totalVatAmount = orderData.total *5/100;
+%>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="https://frisbee-llc.s3.me-central-1.amazonaws.com/images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FrisBee || Order Summary</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        padding-inline: 10px;
+      }
+      .tax_invoice_main_contnent {
+        max-width: 1200px;
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      .order_section_table {
+        margin: 15px 0px;
+      }
+    </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://algodev.in:3300/app/public/js/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <div class="page-container">
+    <section class="tax_invoice_main_contnent">
+      <div>
+        <table>
+          <tr>
+            <th
+              style="
+                text-align: left;
+                border-top: 4px solid gray;
+                border-bottom: 4px solid gray;
+              "
+            >
+              <h2>&#x27A4; Tax Invoice</h2>
+            </th>
+            <th
+              style="
+                text-align: right;
+                border-top: 4px solid gray;
+                border-bottom: 4px solid gray;
+              "
+            >
+              <h2 style="direction: rtl">
+                <span style="display: inline-block; transform: rotate(180deg)"
+                  >&#x27A4;</span
+                >
+                فاتورة ضريبية
+             </h2>
+            </th>
+          </tr>
+        </table>
+        <!-- // next table -->
+        <table class="order_section_table">
+          <tr>
+            <td style="text-align: left; line-height: 0"><h4>Order#</h4></td>
+            <td style="text-align: center; line-height: 0">
+              <h4 style="width: 71%; text-align: end"><%= orderData.order_seq_id %></h4>
+            </td>
+            <td style="text-align: right; line-height: 0">
+              <h4>فاتورة الضرائب</h4>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: left; line-height: 0"><h4>Date#</h4></td>
+            <td style="text-align: center; line-height: 0">
+              <h4 style="width: 71%; text-align: end"><%= invoiceDatae %></h4>
+            </td>
+            <td style="text-align: right; line-height: 0">
+              <h4>تاريخ</h4>
+            </td>
+          </tr>
+        </table>
+        <!-- // Seller Information -->
+        <table style="width: 100%; border-bottom: 2px solid">
+          <tr>
+            <th
+              style="
+                text-align: left;
+                border-top: 2px solid gray;
+                border-bottom: 2px solid gray;
+                font-size: 12px;
+                width: 25%;
+              "
+            >
+              <h2>Seller Information</h2>
+            </th>
+            <th
+              style="
+                text-align: right;
+                border-top: 2px solid gray;
+                border-bottom: 2px solid gray;
+                font-size: 12px;
+                border-right: 1px solid;
+                width: 25%;
+              "
+            >
+              <h2 style="direction: rtl">
+                <span
+                  style="display: inline-block; transform: rotate(180deg)"
+                ></span>
+                معلومات البائع
+              </h2>
+            </th>
+            <th
+              style="
+                text-align: left;
+                border-top: 2px solid gray;
+                border-bottom: 2px solid gray;
+                font-size: 12px;
+                width: 25%;
+              "
+            >
+              <h2 style="margin-left: 4px">Buyer Information</h2>
+            </th>
+            <th
+              style="
+                text-align: right;
+                border-top: 2px solid gray;
+                border-bottom: 2px solid gray;
+                font-size: 12px;
+                width: 25%;
+              "
+            >
+              <h2 style="direction: rtl">
+                <span
+                  style="display: inline-block; transform: rotate(180deg)"
+                ></span>
+                معلومات المشتري
+              </h2>
+            </th>
+          </tr>
+
+          <!-- ///HHHHHHHHHHHHHH -->
+          <tr>
+            <td></td>
+            <!-- Seller Information -->
+            <td style="text-align: end; border-right: 1px solid black;  padding-right: 6px;">
+              <%=orderData.shopId.shop_name%><br/>
+                <%=orderData.shopId.address%>, <br/>
+                <%=orderData.shopId.city%>,<br/>
+                <%=orderData.shopId.street%><br/>
+                UAE<br/>
+                Ph. No. : +971 <%= orderData.shopId.phone %><br/>
+                Email. : +971 <%= orderData.shopId.email %><br/>
+                Branch : <br/>
+                <%=orderData.branch.branch_name%><br/>
+                Ph. No. : +971 <%=orderData.branch.phone%><br/>
+                Email : <%=orderData.branch.email%><br/>
+            </td>
+            <td></td>
+            <!-- Buyer Information -->
+            <td style="text-align: end;padding: 6px 0px;">
+              <%=orderData.userData.name%> <br/>
+              Ph. No. : +971 <%=orderData.userData.phone%><br/>
+              Email : <%=orderData.userData.email%><br/>
+              <b>Delivery Address:</b><br/>
+              Name : <%=orderData.deliveryAddress.firstname%> <%=orderData.deliveryAddress.lastname%> <br/>
+              <%=orderData.deliveryAddress.address%> <br/>
+              <%=orderData.deliveryAddress.city%> <br/>
+              Ph. No. : +971 <%=orderData.deliveryAddress.phone%><br/>
+              Email : <%=orderData.deliveryAddress.email%><br/>
+            </td>
+          </tr>
+          
+        </table>
+        <!-- // Next Line -->
+        <table style="border-collapse: collapse">
+          <tr>
+            <th
+              style="
+                border: 1px solid gray;
+                background-color: #d6d2df;
+                padding: 35px;
+              "
+            >
+              <div>
+                <span style="font-size: 13px">Items</span> <br />
+                <span style="font-size: 15px">أغراض</span>
+              </div>
+            </th>
+            <th
+              style="
+                border: 1px solid gray;
+                background-color: #d6d2df;
+                padding: 35px;
+              "
+            >
+              <div>
+                <span style="font-size: 10px">(Exl VAT)</span> <br />
+                <span style="font-size: 13px">Unit Price</span> <br />
+                <span style="font-size: 15px">متضمن للضريبة</span> <br />
+                <span style="font-size: 9px">سعر الوحدة</span>
+              </div>
+            </th>
+            <th style="border: 1px solid gray; background-color: #d6d2df">
+              <div>
+                <span style="font-size: 13px">Quantity</span> <br />
+                <span style="font-size: 15px">كمية</span>
+              </div>
+            </th>
+            <th style="border: 1px solid gray; background-color: #d6d2df">
+              <div>
+                <span style="font-size: 13px">Discount</span> <br />
+                <span style="font-size: 9px">تخفيض</span>
+              </div>
+            </th>
+            <th style="border: 1px solid gray; background-color: #d6d2df">
+              <div>
+                <span style="font-size: 13px">Tax Rate</span> <br />
+                <span style="font-size: 15px">معدل الضريبة</span>
+              </div>
+            </th>
+            <th style="border: 1px solid gray; background-color: #d6d2df">
+              <div>
+                <span style="font-size: 13px">VAT Amount</span> <br />
+                <span style="font-size: 9px">ضريبة</span>
+              </div>
+            </th>
+            <th style="border: 1px solid gray; background-color: #d6d2df">
+              <div>
+                <span style="font-size: 10px">(Incl. VAT)</span> <br />
+                <span style="font-size: 13px">Total</span> <br />
+                <span style="font-size: 9px">المجموع</span>
+              </div>
+            </th>
+          </tr>
+          <% orderData.orderdetails.forEach(item => { 
+            const vatAMount = item.subtotal * 5/100
+            %>
+          <tr>
+            <td style="border: 1px solid gray; padding: 17px">
+              <%=item.productId.name%>
+            </td>
+            <td style="border: 1px solid gray; padding: 17px"><%=item.rate - vatAMount %></td>
+            <td style="border: 1px solid gray; padding: 17px"><%=item.qty%></td>
+            <td style="border: 1px solid gray; padding: 17px">0</td>
+            <td style="border: 1px solid gray; padding: 17px"><%= item.subtotal * 5/100 %></td>
+            <td style="border: 1px solid gray; padding: 17px">5%</td>
+            <td style="border: 1px solid gray; padding: 17px"><%=item.subtotal%></td>
+          </tr>
+          <% }) %>
+        </table>
+        <!-- // next line -->
+        <table style="margin-top: 30px">
+          <tr>
+            <th
+              style="
+                text-align: left;
+                border-top: 2px solid gray;
+                border-bottom: 2px solid gray;
+              "
+            >
+              <h4>Total Amount</h4>
+            </th>
+            <th
+              style="
+                text-align: right;
+                border-top: 2px solid gray;
+                border-bottom: 2px solid gray;
+              "
+            >
+              <h4 style="direction: rtl">
+                <span
+                  style="display: inline-block; transform: rotate(180deg)"
+                ></span>
+                المبلغ الإجمالي
+              </h4>
+            </th>
+          </tr>
+        </table>
+        <!-- // Next Line -->
+        <table style="border-bottom: 2px solid black">
+          <tr>
+            <td style="text-align: left; line-height: 0; width: 42%">
+              <h4>Total <span style="font-size: 10px">(Excl. VAT)</span></h4>
+            </td>
+            <td style="text-align: center; line-height: 0">
+              <h4 style="width: 71%; text-align: end">AED <%= orderData.total - totalVatAmount %></h4>
+            </td>
+            <td style="text-align: right; line-height: 0">
+              <h4>المبلغ الإجمالي شامل الضريبة</h4>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: left; line-height: 0; width: 25%">
+              <h4>VAT</h4>
+            </td>
+            <td style="text-align: center; line-height: 0">
+              <h4 style="width: 71%; text-align: end">AED <%=totalVatAmount%></h4>
+            </td>
+            <td style="text-align: right; line-height: 0">
+              <h4>فاتورة الضرائب</h4>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: left; line-height: 0; width: 25%">
+              <h4>
+                Total Amount
+              </h4>
+            </td>
+            <td style="text-align: center; line-height: 0">
+              <h4 style="width: 71%; text-align: end">AED <%=orderData.total%></h4>
+            </td>
+            <td style="text-align: right; line-height: 0">
+              <h4>فاتورة الضرائب</h4>
+            </td>
+          </tr>
+
+          <% if(orderData.isCouponUsed === 'Y'){ %>
+            <tr>
+              <td style="text-align: left; line-height: 0; width: 25%">
+                <h4>Discount (<%=orderData.promocode%>)</h4>
+              </td>
+              <td style="text-align: center; line-height: 0">
+                <h4 style="width: 71%; text-align: end">-AED <%=orderData.discount%></h4>
+              </td>
+              <td style="text-align: right; line-height: 0">
+                <h4>فاتورة الضرائب</h4>
+              </td>
+            </tr>
+          <% } %>
+          
+          <tr>
+            <td style="text-align: left; line-height: 0; width: 25%">
+              <h4>Delivery Charges</h4>
+            </td>
+            <td style="text-align: center; line-height: 0">
+              <h4 style="width: 71%; text-align: end">AED <%=orderData.delivery_charges%></h4>
+            </td>
+            <td style="text-align: right; line-height: 0">
+              <h4>رسوم التوصيل</h4>
+            </td>
+          </tr>
+        </table>
+        <!-- // next line -->
+        <table>
+          <tr>
+            <th style="text-align: left; width: 40%">
+              <h4>Total Payable</h4>
+            </th>
+            <th style="text-align: center">
+              <h4>AED <%=orderData.paidAmount%></h4>
+            </th>
+            <th style="text-align: right">
+              <h4 style="direction: rtl">
+                <span
+                  style="display: inline-block; transform: rotate(180deg)"
+                ></span>
+                مجموع المستحق الدفع
+              </h4>
+            </th>
+          </tr>
+        </table>
+        <!-- // New line -->
+        <table style="margin-top: 30px">
+          <tr>
+            <th style="text-align: left"></th>
+            <th style="text-align: right">
+              <span style="direction: rtl">
+                لمزيد من المعلومات حول الطلب، يرجى الاتصال بـ contact@frisbee.com
+              </span>
+            </th>
+          </tr>
+          <tr>
+            <th style="text-align: left"></th>
+            <th style="text-align: right">
+              <span style="direction: rtl">
+                For more information about the order, please
+                contact contact@frisbee.com
+              </span>
+            </th>
+          </tr>
+        </table>
+        <button id="downloadPdfButton">Download PDF</button>
+      </div>
+    </section>
+  </div>
+  </body>
+</html>
+
+<script>
+  // Function to generate and download PDF
+  function downloadPDF() {
+    window.jsPDF = window.jspdf.jsPDF;
+    var pdf = new jsPDF();
+    const source = document.querySelector("html");
+    // const source = document.querySelector(".page-container");
+    // const source = `<h1>Hello<h1/>`
+
+    pdf.html(source, {
+      callback: function (pdf) {
+        pdf.save('invoice.pdf');
+      }
+    });
+  }
+  document.getElementById('downloadPdfButton').addEventListener('click', downloadPDF);
+</script>

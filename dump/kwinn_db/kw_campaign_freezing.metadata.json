@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"85ab2b1b02834015a72d6b4f9b6c6e46","collectionName":"kw_campaign_freezing","type":"collection"}

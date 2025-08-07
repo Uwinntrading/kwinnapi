@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"9de8372cdb844e39ba8cdad5cd88619a","collectionName":"bw_recharge_plans","type":"collection"}

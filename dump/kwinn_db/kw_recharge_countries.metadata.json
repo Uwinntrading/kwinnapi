@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"CountryIso":{"$numberInt":"1"}},"name":"CountryIso_1","background":true,"unique":true}],"uuid":"bc43fe5a37c74419b63c4ed0546e31e0","collectionName":"kw_recharge_countries","type":"collection"}

@@ -1,0 +1,429 @@
+{
+    "APP_MESSAGES": {
+        "SUCCESS": {
+            "errorCode": "success",
+            "message": "Success",
+            "statusCode": 200
+        },
+        "ERROR_VALIDATION": {
+            "errorCode": "requestParamsNotComplete",
+            "message": "Validation Error",
+            "statusCode": 400
+        },
+        "ERROR_SERVER_ERROR": {
+            "errorCode": "serverError",
+            "message": "Server Error",
+            "statusCode": 500
+        },
+        "ERROR_DATA_NOT_FOUND": {
+            "errorCode": "dataNotFound",
+            "message": "No data found",
+            "statusCode": 200
+        },
+        "ERROR_ALREADY_EXIST": {
+            "errorCode": "dataAlreadyExist",
+            "message": "Data alrady exist.",
+            "statusCode": 200
+        },
+        "VERIFY_OTP": {
+            "errorCode": "verifyOtp",
+            "message": "Please Verify OTP",
+            "statusCode": 200
+        },
+        "PASSWORD_UPDATED": {
+            "errorCode": "passwordChanged",
+            "message": "Password changed successfully.",
+            "statusCode": 200
+        },
+        "EMAIL_EMPTY": {
+            "errorCode": "emailempty",
+            "message": "Email is required.",
+            "statusCode": 200
+        },
+        "PHONE_EMPTY": {
+            "errorCode": "phoneempty",
+            "message": "Phone is required.",
+            "statusCode": 200
+        },
+        "PASSWORD_EMPTY": {
+            "errorCode": "passwordempty",
+            "message": "Password is required.",
+            "statusCode": 200
+        },
+        "USERNAME_EMPTY": {
+            "errorCode": "usernameempty",
+            "message": "User name is required.",
+            "statusCode": 200
+        },
+        "LAST_NAME_EMPTY": {
+            "errorCode": "lastnameempty",
+            "message": "Last name is required.",
+            "statusCode": 200
+        },
+        "COUNTRY_CODE_EMPTY": {
+            "errorCode": "country_code_empty",
+            "message": "Country code is required.",
+            "statusCode": 200
+        },
+        "SUCCESSFULLY_UPDATED": {
+            "errorCode": "successfully_updated.",
+            "message": "Successfully updated.",
+            "statusCode": 200
+        },
+        "SUCCESSFULLY_DELETED": {
+            "errorCode": "successfully_deleted.",
+            "message": "Successfully Deleted.",
+            "statusCode": 200
+        },
+        "USERS_ALREADY_EXIST": {
+            "errorCode": "alreadyregistered.",
+            "message": "Phone/Email already registered.",
+            "statusCode": 400
+        },
+        "CREDENTIAL_ERROR": {
+            "errorCode": "credentialerror.",
+            "message": "Please enter correct phone/email and password.",
+            "statusCode": 200
+        },
+        "OTP_EMPTY": {
+            "errorCode": "otpempty.",
+            "message": "Please enter one time password (OTP).",
+            "statusCode": 200
+        },
+        "OTP_WRONG": {
+            "errorCode": "otpwrong.",
+            "message": "Please enter correct one time password (OTP).",
+            "statusCode": 200
+        },
+        "LOGIN_USER_EMPTY": {
+            "errorCode": "loginuserempty.",
+            "message": "Please enter valid phone/email.",
+            "statusCode": 200
+        },
+        "PRODUCT_ID_EMPTY": {
+            "errorCode": "productidempty.",
+            "message": "Please enter a valid product id.",
+            "statusCode": 200
+        },
+        "PRODUCT_NOT_FOUND": {
+            "errorCode": "productnotfound.",
+            "message": "Product not found.",
+            "statusCode": 200
+        },
+        "QTY_EMPTY": {
+            "errorCode": "qtyempty.",
+            "message": "Quantity is required.",
+            "statusCode": 200
+        },
+        "SUBTOTAL_EMPTY": {
+            "errorCode": "subtotalempty.",
+            "message": "Sub-Total is required.",
+            "statusCode": 200
+        },
+        "TOTAL_PRIZE_EMPTY": {
+            "errorCode": "totalprizeempty.",
+            "message": "Total prize is required.",
+            "statusCode": 200
+        },
+        "TICKET_EMPTY": {
+            "errorCode": "ticketempty.",
+            "message": "Ticket is required.",
+            "statusCode": 200
+        },
+        "DRAW_DATE_ERROR": {
+            "errorCode": "drawdateerror.",
+            "message": "Draw date expire.",
+            "statusCode": 200
+        },
+        "ORDER_ERROR": {
+            "errorCode": "ordererror.",
+            "message": "An error occurred during the order creation process.",
+            "statusCode": 200
+        },
+        "PIN_ERROR": {
+            "errorCode": "pinerror.",
+            "message": "Enter valid pin.",
+            "statusCode": 200
+        },
+        "PIN_EMPTY": {
+            "errorCode": "pinempty.",
+            "message": "Pin is required.",
+            "statusCode": 200
+        },
+        "START_DATE_EMPTY": {
+            "errorCode": "startdateempty.",
+            "message": "Start date is required.",
+            "statusCode": 200
+        },
+        "END_DATE_EMPTY": {
+            "errorCode": "enddateempty.",
+            "message": "End date is required.",
+            "statusCode": 200
+        },
+        "ISOS_REGION_EMPTY": {
+            "errorCode": "isosregionempty.",
+            "message": "Country Isos/Region Code is required.",
+            "statusCode": 200
+        },
+        "PROVIDER_EMPTY": {
+            "errorCode": "providerempty.",
+            "message": "Provider is required.",
+            "statusCode": 200
+        },
+        "MARKUPFEE_EMPTY": {
+            "errorCode": "markupfeeempty.",
+            "message": "MarkUp is empty.",
+            "statusCode": 200
+        },
+        "BALANCE_ERROR": {
+            "errorCode": "balanceerror.",
+            "message": "Low balance.",
+            "statusCode": 200
+        },
+        "OTP_ERROR": {
+            "errorCode": "otperror.",
+            "message": "One Time Password (OTP) not sent.",
+            "statusCode": 200
+        },
+        "COUNTRY_NAME_EMPTY": {
+            "errorCode": "countryNameEmpty.",
+            "message": "Country name is required.",
+            "statusCode": 200
+        },
+        "FROM_DATE_EMPTY": {
+            "errorCode": "fromDateEmpty.",
+            "message": "From date is required.",
+            "statusCode": 200
+        },
+        "TO_DATE_EMPTY": {
+            "errorCode": "toDateEmpty.",
+            "message": "From date is required.",
+            "statusCode": 200
+        },
+        "DEVICE_NOT_MATCH": {
+            "errorCode": "deviceNotMatch.",
+            "message": "User registered with another POS device.",
+            "statusCode": 200
+        },
+        "PERMISSION_ERROR": {
+            "errorCode": "permissionError",
+            "message": "Your are not allowed to perform this operation.",
+            "statusCode": 404
+        },
+        "TITLE_EMPTY": {
+            "errorCode": "titleEmpty",
+            "message": "Title is required.",
+            "statusCode": 404
+        },
+        "DESCRIPTION_EMPTY": {
+            "errorCode": "descriptionEmpty",
+            "message": "Description is required.",
+            "statusCode": 404
+        },
+        "IMAGE_EMPTY": {
+            "errorCode": "imageEmpty",
+            "message": "Image is required.",
+            "statusCode": 404
+        },
+        "CATEGORY_EMPTY": {
+            "errorCode": "categoryEmpty",
+            "message": "Category is required.",
+            "statusCode": 404
+        },
+        "SUB_CATEGORY_EMPTY": {
+            "errorCode": "subCategoryEmpty",
+            "message": "Sub-Category is required.",
+            "statusCode": 404
+        },
+        "STRAIGHT_AMOUNT": {
+            "errorCode": "straight_add_on_amount",
+            "message": "Straight addons amount is required.",
+            "statusCode": 404
+        },
+        "RUMBLE_AMOUNT": {
+            "errorCode": "rumble_add_on_amount",
+            "message": "Rumble addons amount is required.",
+            "statusCode": 404
+        },
+        "REVERSE_AMOUNT": {
+            "errorCode": "reverse_add_on_amount",
+            "message": "Reverse addons amount is required.",
+            "statusCode": 404
+        },
+        "COMING_SOON_EMPTY": {
+            "errorCode": "comingSoonEmpty",
+            "message": "Coming soon is required.",
+            "statusCode": 404
+        },
+        "COUNTDOWN_EMPTY": {
+            "errorCode": "countdownEmpty",
+            "message": "Countdown is required.",
+            "statusCode": 404
+        },
+        "LOTTO_TYPE_EMPTY": {
+            "errorCode": "lottoTypeEmpty",
+            "message": "Lotto type is required.",
+            "statusCode": 404
+        },
+        "VALID_TIME_EMPTY": {
+            "errorCode": "validTimeEmpty",
+            "message": "Valid time is required.",
+            "statusCode": 404
+        },
+        "DRAW_DATE_EMPTY": {
+            "errorCode": "drawDateEmpty",
+            "message": "Draw date is required.",
+            "statusCode": 404
+        },
+        "DRAW_TIME_EMPTY": {
+            "errorCode": "drawTimeEmpty",
+            "message": "Draw time is required.",
+            "statusCode": 404
+        },
+        "RANGE_PREFIX_EMPTY": {
+            "errorCode": "rangePrefixEmpty",
+            "message": "Range prefix is required.",
+            "statusCode": 404
+        },
+        "TICKET_NUMBER_REPEAT_EMPTY": {
+            "errorCode": "ticketNumberRepeatEmpty",
+            "message": "Ticket number repeat is required.",
+            "statusCode": 404
+        },
+        "NUMBER_RANGE_START_EMPTY": {
+            "errorCode": "numberRangeStartEmpty",
+            "message": "Number range start is required.",
+            "statusCode": 404
+        },
+        "NUMBER_RANGE_END_EMPTY": {
+            "errorCode": "numberRangeEndEmpty",
+            "message": "Number range end is required.",
+            "statusCode": 404
+        },
+        "SHOW_ON_EMPTY": {
+            "errorCode": "showOnEmpty.",
+            "message": "Show on is required",
+            "statusCode": 404
+        },
+        "CAMPAIGN_NOT_FOUND": {
+            "errorCode": "campaignNotFound",
+            "message": "Campaign not found",
+            "statusCode": 404
+        },
+        "PRIZE_NOT_FOUND": {
+            "errorCode": "prizeNotFound",
+            "message": "Prize not found",
+            "statusCode": 404
+        },
+        "PRIZE_ALREADY_EXIST": {
+            "errorCode": "prizeAlreadyExist",
+            "message": "Prize already exist",
+            "statusCode": 404
+        },
+        "SETTING_TYPE_EMPTY": {
+            "errorCode": "settingTypeEmpty",
+            "message": "Setting type is required.",
+            "statusCode": 404
+        },
+        "STRAIGHT_GAME_NAME_EMPTY": {
+            "errorCode": "straightGameName",
+            "message": "Straight game name is required.",
+            "statusCode": 404
+        },
+        "RUMBLE_GAME_NAME_EMPTY": {
+            "errorCode": "rumbleGameName",
+            "message": "Rumble game name is required.",
+            "statusCode": 404
+        },
+        "CHANCE_GAME_NAME_EMPTY": {
+            "errorCode": "chanceGameName",
+            "message": "Chance game name is required.",
+            "statusCode": 404
+        },
+        "FREEZING_START_TIME_EMPTY": {
+            "errorCode": "campaignFreezingStartTime",
+            "message": "Freezing start time is required.",
+            "statusCode": 404
+        },
+        "FREEZING_END_TIME_EMPTY": {
+            "errorCode": "campaignFreezingEndTime",
+            "message": "Freezing end time is required.",
+            "statusCode": 404
+        },
+        "GAME_RULE_IMAGE_EMPTY": {
+            "errorCode": "gameRuleImage",
+            "message": "Game rule image is required.",
+            "statusCode": 404
+        },
+        "GAME_DESCRIPTION_EMPTY": {
+            "errorCode": "gameDescription",
+            "message": "Game description is required.",
+            "statusCode": 404
+        },
+        "SETTING_ALREADY_EXIST": {
+            "errorCode": "settingAlreadyExist",
+            "message": "Setting already exist",
+            "statusCode": 404
+        },
+        "TICKET_ERROR": {
+            "errorCode": "ticketError",
+            "message": "Ticket is required.",
+            "statusCode": 404
+        },
+        "WINNER_LIST_EMPTY": {
+            "errorCode": "winnerListEmpty",
+            "message": "Winner's list is required.",
+            "statusCode": 404
+        },
+        "ID_ERROR": {
+            "errorCode": "idError",
+            "message": "Please enter correct id.",
+            "statusCode": 404
+        },
+        "ORDER_ID_EMPTY": {
+            "errorCode": "orderIdEmpty",
+            "message": "Order id is required.",
+            "statusCode": 404
+        },
+        "ORDER_NOT_FOUND": {
+            "errorCode": "orderidempty",
+            "message": "Order is not found",
+            "statusCode": 400
+        },
+        "ALREADY_REDEEM_ERROR": {
+            "errorCode": "alreadyRedeemError",
+            "message": "Already redeemed.",
+            "statusCode": 404
+        },
+        "ALREADY_PRINTED": {
+            "errorCode": "alreadyprinted",
+            "message": "Order is not found",
+            "statusCode": 200
+        },
+        "WINNERS_ALREADY_EXIST": {
+            "errorCode": "winnersAlreadyExist",
+            "message": "Winner's already exist.",
+            "statusCode": 404
+        },
+        "INVALID_LOGIN_CREDENTIAL" : {
+            "errorCode": "invalidLoginCredential",
+            "message": "Please enter valid email/password.",
+            "statusCode": 404
+        },
+        "PASSWORD_ERROR" : {
+            "errorCode": "passwordError",
+            "message": "Please enter valid email/password.",
+            "statusCode": 404
+        },
+        "INVALID_OTP" : {
+            "errorCode": "invalidOTP",
+            "message": "Please enter valid one time password (OTP).",
+            "statusCode": 404
+        },
+        "INVALID_EMAIL" : {
+            "errorCode": "invalidEmail",
+            "message": "Please enter valid email address.",
+            "statusCode": 404
+        }
+    }
+}

@@ -1,0 +1,48 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const kw_lotto_orders_archives = new Schema({
+  _id : {type : Schema.Types.ObjectId },
+  sequence_id: { type: Number },
+  order_id: { type: String },
+  user_id: { type: Number },
+  user_type: { type: String },
+  user_email: { type: String, default: "" },
+  user_phone: { type: Number },
+  store_name: { type: String, default: null },
+  product_id: { type: Number },
+  product_title: { type: String },
+  product_qty: { type: String },
+  prize_title: { type: String },
+  vat_amount: { type: Number },
+  straight_add_on_amount: { type: Number },
+  rumble_add_on_amount: { type: Number },
+  reverse_add_on_amount: { type: Number },
+  subtotal: { type: Number },
+  total_price: { type: Number },
+  availableArabianPoints: { type: Number },
+  end_balance: { type: Number },
+  payment_mode: { type: String },
+  payment_from: { type: String },
+  product_is_donate: { type: Boolean, default: null },
+  order_status: { type: String },
+  device_type: { type: String,  },
+  app_version: { type: Number,  },
+  ticket: { type: [[Number]], required: true },
+  status: { type: String },
+  order_first_name: { type: String, default: null },
+  order_last_name: { type: String, default: null },
+  order_users_country_code: { type: String, default: "+971" },
+  order_users_mobile: { type: String, default: null },
+  order_users_email: { type: String, default: null },
+  SMS: { type: String, default: null },
+  creation_ip: { type: String },
+  created_at: { type: String },
+  refund_date: { type: Number },
+  update_date: { type: Number },
+  update_ip: { type: String  },
+  updated_by: { type: Number },
+  formatted_created_at: { type: Date }
+},{timestamps: true, versionKey: false});
+
+module.exports = mongoose.model('kw_lotto_orders_archives', kw_lotto_orders_archives);

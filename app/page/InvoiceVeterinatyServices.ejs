@@ -1,0 +1,206 @@
+<% const invoiceDate=new Date(orderData.createdAt).toLocaleDateString('en-GB', { day: '2-digit' , month: '2-digit' ,
+    year: 'numeric' }); const totalVatAmount=orderData.total * 5 / 100; %>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="https://frisbee-llc.s3.me-central-1.amazonaws.com/images/favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FrisBee || Veterinary Booking Summary</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                padding: 10px;
+            }
+
+            .invoice-container {
+                max-width: 800px;
+                margin: auto;
+                background-color: #fff;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                font-size: 12px;
+            }
+
+            .invoice-container h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .invoice-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+            }
+
+            .invoice-table th,
+            .invoice-table td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: center;
+            }
+
+            .invoice-table th {
+                background-color: #f2f2f2;
+            }
+
+            .invoice-table td.text-left,
+            .invoice-table th.text-left {
+                text-align: left;
+            }
+
+            .invoice-table td.text-right,
+            .invoice-table th.text-right {
+                text-align: right;
+            }
+
+            .invoice-table td.price {
+                font-weight: bold;
+            }
+
+            .footer {
+                margin-top: 50px;
+                text-align: center;
+            }
+
+            #downloadPdfButton {
+                display: block;
+                margin: 30px auto;
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    </head>
+
+    <body>
+        <div class="invoice-container" id="invoice">
+            <h2>Tax Invoice</h2>
+            <table class="invoice-table">
+                <tr>
+                    <th colspan="2" class="text-left">Order#</th>
+                    <th colspan="2" class="text-right">فاتورة الضرائب</th>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text-left">
+                        <%= orderData.booking_seq_id %>
+                    </td>
+                    <td colspan="2" class="text-right">
+                        <%= invoiceDate %>
+                    </td>
+                </tr>
+            </table>
+            <table class="invoice-table">
+                <tr>
+                    <th colspan="2" class="text-left">Seller Information</th>
+                    <th colspan="2" class="text-right">Customer Information</th>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text-left">
+                        <%=orderData.shopId.shop_name%><br />
+
+
+                            UAE<br />
+                            Ph. No. : +971 <%= orderData.shopId.phone %><br />
+                                Email. : <%= orderData.shopId.email %><br />
+
+                    </td>
+                    <td colspan="2" class="text-left">
+                        <%=orderData.userData.name%> <br />
+                            Ph. No. : +971 <%=orderData.userData.phone%><br />
+                                Email : <%=orderData.userData.email%><br />
+                                    <b>Delivery Address:</b><br />
+                                    Name : <%=orderData.ownerInfo.name%>
+
+                                        <%=orderData.ownerInfo.address%> <br />
+
+                                            Ph. No. : +971 <%=orderData.ownerInfo.phone%><br />
+                                                Email : <%=orderData.ownerInfo.email%><br />
+                    </td>
+                </tr>
+            </table>
+            <table class="invoice-table">
+                <tr>
+                    <th>Items</th>
+                    <th>Unit Price (Excl. VAT)</th>
+
+                    <th>Discount</th>
+                    <th>Tax Rate</th>
+                    <th>VAT Amount</th>
+                    <th>Total (Incl. VAT)</th>
+                </tr>
+
+                <tr>
+                    <td style="max-width: 200px;">
+                        <%= orderData?.bookingdetails[0]?.services?.name %>
+                    </td>
+                    <td>
+
+                        <% let vat = orderData.total * 5/100 %>
+                        <%= (orderData.total - vat).toFixed(2) %>
+                    </td>
+
+                    <td>0</td>
+                    <td>5%</td>
+                    <td>
+                        <%= vat.toFixed(2) %>
+                    </td>
+                    <td>
+                        <%= orderData.subTotal.toFixed(2) %>
+                    </td>
+                </tr>
+
+            </table>
+            <table class="invoice-table">
+                <tr>
+                    <td colspan="2" class="text-left">Total Amount</td>
+                    <td colspan="2" class="text-right">المبلغ الإجمالي</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text-left">Total (Excl. VAT)</td>
+                    <td colspan="2" class="text-right">AED <%= (orderData.total - totalVatAmount).toFixed(2) %>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text-left">VAT</td>
+                    <td colspan="2" class="text-right">AED <%= totalVatAmount.toFixed(2) %>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text-left">Total Amount</td>
+                    <td colspan="2" class="text-right">AED <%= orderData.total.toFixed(2) %>
+                    </td>
+                </tr>
+                <% if(orderData.isCouponUsed==='Y' ){ %>
+                    <tr>
+                        <td colspan="2" class="text-left">Discount (<%=orderData.promocode%>)</td>
+                        <td colspan="2" class="text-right">-AED <%=orderData.discount.toFixed(2) %>
+                        </td>
+                    </tr>
+                    <% } %>
+
+                        <tr>
+                            <td colspan="2" class="text-left">Total Payable</td>
+                            <td colspan="2" class="text-right">AED <%=orderData.paidAmount.toFixed(2) %>
+                            </td>
+                        </tr>
+            </table>
+            <div class="footer">
+                <p>
+                    لمزيد من المعلومات حول الطلب، يرجى الاتصال بـ contact@frisbee.com
+                    <br>
+                    For more information about the order, please contact contact@frisbee.com
+                </p>
+            </div>
+        </div>
+    </body>
+
+    </html>

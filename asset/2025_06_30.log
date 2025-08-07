@@ -1,0 +1,23 @@
+{"output":"afsar.ali@algosoft.co login successfully at 2025-06-30 07:58:38.","payload":"ID : 681aeba500c7615ed541e146","ip":"14.98.85.62, 172.71.241.73","timestamp":"2025-06-30 07:58:38","success":true}
+{"output":"info@k-winn.com login successfully at 2025-06-30 10:45:19.","payload":"ID : 685f842aa4535cb4b2405e75","ip":"2.50.39.203, 162.158.96.215","timestamp":"2025-06-30 10:45:19","success":true}
+{"output":"asiflulu2@gmail.com login successfully at 2025-06-30 10:46:18.","payload":"ID : 6849b7423e613c8f43303d49","ip":"2.50.39.203, 162.158.96.178","timestamp":"2025-06-30 10:46:18","success":true}
+{"output":"info@k-winn.com login successfully at 2025-06-30 10:48:15.","payload":"ID : 685f842aa4535cb4b2405e75","ip":"2.50.39.203, 162.158.96.227","timestamp":"2025-06-30 10:48:15","success":true}
+{"output":"afsar.ali@algosoft.co login successfully at 2025-06-30 11:50:32.","payload":"ID : 681aeba500c7615ed541e146","ip":"14.98.85.62, 172.69.43.172","timestamp":"2025-06-30 11:50:32","success":true}
+{"output":"afsar@algosoft.co login successfully at 2025-06-30 11:52:45.","payload":"ID : 6836f2cb7fd8ce45ac4d40e8","ip":"14.98.85.62, 172.69.43.173","timestamp":"2025-06-30 11:52:45","success":true}
+{"output":"info@k-winn.com logout successfully at 2025-06-30 11:58:1.","payload":"ID : 685f842aa4535cb4b2405e75","ip":"2.50.39.203, 162.158.96.214","timestamp":"2025-06-30 11:58:01","success":true}
+{"output":"info@k-winn.com login successfully at 2025-06-30 11:58:24.","payload":"ID : 685f842aa4535cb4b2405e75","ip":"2.50.39.203, 162.158.96.214","timestamp":"2025-06-30 11:58:24","success":true}
+{"output":"asiflulu2@gmail.com login successfully at 2025-06-30 11:59:8.","payload":"ID : 6849b7423e613c8f43303d49","ip":"2.50.39.203, 162.158.96.227","timestamp":"2025-06-30 11:59:08","success":true}
+{"output":"asiflulu2@gmail.com logout successfully at 2025-06-30 11:59:14.","payload":"ID : 6849b7423e613c8f43303d49","ip":"2.50.39.203, 162.158.96.227","timestamp":"2025-06-30 11:59:14","success":true}
+{"output":"asiflulu2@gmail.com change password successfully at 2025-06-30 11:59:48.","payload":"ID : 6849b7423e613c8f43303d49","ip":"2.50.39.203, 162.158.96.226","timestamp":"2025-06-30 11:59:48","success":true}
+{"output":"asiflulu2@gmail.com login successfully at 2025-06-30 12:00:11.","payload":"ID : 6849b7423e613c8f43303d49","ip":"2.50.39.203, 162.158.96.226","timestamp":"2025-06-30 12:00:11","success":true}
+{"output":"info@k-winn.com update general data.","payload":{"condition":{"_id":"672eeb5a54b26fdaf40dbf34"},"data":{"analyser_start_time":"00:01","analyser_end_time":"23:59","invoice_start_time":"00:00","invoice_end_time":"23:59"}},"ip":"2.50.39.203, 162.158.96.178","timestamp":"2025-06-30 12:01:07","success":true}
+{"output":"asiflulu2@gmail.com logout successfully at 2025-06-30 12:03:29.","payload":"ID : 6849b7423e613c8f43303d49","ip":"2.50.39.203, 162.158.96.178","timestamp":"2025-06-30 12:03:29","success":true}
+{"output":"asiflulu2@gmail.com login successfully at 2025-06-30 12:03:49.","payload":"ID : 6849b7423e613c8f43303d49","ip":"2.50.39.203, 162.158.96.178","timestamp":"2025-06-30 12:03:49","success":true}
+{"output":"info@k-winn.com login successfully at 2025-06-30 12:05:14.","payload":"ID : 685f842aa4535cb4b2405e75","ip":"2.50.39.203, 162.158.96.166","timestamp":"2025-06-30 12:05:14","success":true}
+{"output":"asiflulu2@gmail.com logout successfully at 2025-06-30 12:06:56.","payload":"ID : 6849b7423e613c8f43303d49","ip":"2.50.39.203, 162.158.96.215","timestamp":"2025-06-30 12:06:56","success":true}
+{"output":"asiflulu2@gmail.com login successfully at 2025-06-30 12:07:17.","payload":"ID : 6849b7423e613c8f43303d49","ip":"2.50.39.203, 162.158.96.215","timestamp":"2025-06-30 12:07:17","success":true}
+{"output":"info@k-winn.com logout successfully at 2025-06-30 12:07:56.","payload":"ID : 685f842aa4535cb4b2405e75","ip":"2.50.39.203, 162.158.96.226","timestamp":"2025-06-30 12:07:56","success":true}
+{"output":"info@k-winn.com login successfully at 2025-06-30 12:08:27.","payload":"ID : 685f842aa4535cb4b2405e75","ip":"2.50.39.203, 162.158.96.227","timestamp":"2025-06-30 12:08:27","success":true}
+{"output":"info@k-winn.com login successfully at 2025-06-30 15:50:56.","payload":"ID : 685f842aa4535cb4b2405e75","ip":"2.50.39.203, 162.158.96.166","timestamp":"2025-06-30 03:50:56","success":true}
+{"output":"asiflulu2@gmail.com login successfully at 2025-06-30 15:51:55.","payload":"ID : 6849b7423e613c8f43303d49","ip":"2.50.39.203, 162.158.96.178","timestamp":"2025-06-30 03:51:55","success":true}
+{"output":"asiflulu2@gmail.com login successfully at 2025-06-30 16:13:11.","payload":"ID : 6849b7423e613c8f43303d49","ip":"2.50.39.203, 162.158.96.167","timestamp":"2025-06-30 04:13:11","success":true}

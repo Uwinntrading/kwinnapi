@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"f8f27153e57f49b6943c03ccd1817a1a","collectionName":"kw_recharges","type":"collection"}

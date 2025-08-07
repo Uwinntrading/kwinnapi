@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"a031490bc654430d95da30e3e59b43e9","collectionName":"bw_raffle_draws","type":"collection"}

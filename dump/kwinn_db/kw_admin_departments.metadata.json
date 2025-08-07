@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"department_name":{"$numberInt":"1"}},"name":"department_name_1","background":true,"unique":true}],"uuid":"e896040fc11b4965bf5d05966cf61784","collectionName":"kw_admin_departments","type":"collection"}
