@@ -1,4 +1,4 @@
 .env
 .git
-build/index.js
+dump
 *.xlsx
